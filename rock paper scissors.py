@@ -1,34 +1,36 @@
-rock = '''
+rock = """
     _______
 ---'   ____)
       (_____)
       (_____)
       (____)
 ---.__(___)
-'''
+"""
 
-paper = '''
+paper = """
     _______
 ---'   ____)____
           ______)
           _______)
          _______)
 ---.__________)
-'''
+"""
 
-scissors = '''
+scissors = """
     _______
 ---'   ____)____
           ______)
        __________)
       (____)
 ---.__(___)
-'''
+"""
 
 
 import random
 
-user_choise = int(input("what is your choice? 0 for ROCK, 1 for PAPER or 2 for SCISSORS "))
+user_choise = int(
+    input("what is your choice? 0 for ROCK, 1 for PAPER or 2 for SCISSORS ")
+)
 
 computer_choise = random.randint(0, 2)
 
@@ -58,6 +60,3 @@ elif user_choise == 2:
         print(f"computer chose\n{scissors}\n Its a tie, play again!")
 else:
     print("you chose invalid number, you lose!")
-
-
-
