@@ -21,7 +21,7 @@ MENU = {
             "coffee": 24,
         },
         "cost": 3.0,
-    }
+    },
 }
 profit = 0
 resources = {
@@ -34,6 +34,7 @@ resources = {
 # TODO 3. take the input and check if there is enough resources.
 # TODO 4. enough resources = continue OR not enough resources = let him know that and ask again for input of coffee type (TODO 1)
 
+
 def check_resources(order_ingredients):
     for item in order_ingredients:
         if order_ingredients[item] > resources[item]:
@@ -41,16 +42,19 @@ def check_resources(order_ingredients):
             return False
     return True
 
+
 # TODO 5. if enough resource, take input of money.
 # TODO 6. money input : "please insert coins." (How many quarters: * 0.25  \n--> How many dimes: * 0.1 \n--> How many nickel: * 0.05 \n--> How many penny: * 0.01 \n)
 # TODO 7. sum the coins into and check transaction
 
+
 def process_coins():
     total = int(input("How many quarters:")) * 0.25
     total += int(input("How many dimes:")) * 0.1
-    total += int(input("How many nickel:"))* 0.05
-    total += int(input("How many penny: "))* 0.01
+    total += int(input("How many nickel:")) * 0.05
+    total += int(input("How many penny: ")) * 0.01
     return total
+
 
 def transaction_check(money_received, drink_cost):
     if money_received >= drink_cost:
@@ -63,7 +67,9 @@ def transaction_check(money_received, drink_cost):
         print("Sorry that's not enough money. Money refunded.")
         return False
 
+
 # TODO 8. make coffee -print({coffee choice} and bless him)
+
 
 def make_coffee(drink_name, order_ingredients):
     for item in order_ingredients:
@@ -72,8 +78,6 @@ def make_coffee(drink_name, order_ingredients):
 
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name} . Enjoy!")
-    print(order_ingredients)
-
 
 
 # TODO 1. take an input of coffee type
@@ -83,7 +87,7 @@ is_on = True
 # TODO 10. repeat the function
 
 while is_on:
-    user_choice = (input("what would you like? (espresso/latte/cappuccino):"))
+    user_choice = input("what would you like? (espresso/latte/cappuccino):")
     if user_choice == "off":
         is_on = False
 
@@ -93,13 +97,9 @@ while is_on:
         report = f"water: {resources["water"]}ml\nmilk: {resources["milk"]}ml\ncoffee: {resources["coffee"]}g\nMoney: {profit}$"
         print(report)
 
-
     else:
         drink = MENU[user_choice]
         if check_resources(drink["ingredients"]):
             payment = process_coins()
             if transaction_check(payment, drink["cost"]):
                 make_coffee(user_choice, drink["ingredients"])
-
-
-
