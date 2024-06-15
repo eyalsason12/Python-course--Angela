@@ -1,0 +1,17 @@
+# what do i need for creat a Pong Game?
+
+# creat the game court (screen)
+
+# creat the pedals
+
+# creat the ball for the game and make him move
+
+#detect colloision with wall and bounce
+
+# detect colliision with pedal
+
+# make scoreboard
+
+# check if the ball get inside one of the sides and which side that get the ball inside so the second player get point
+
+# to creat the middle line of the court
