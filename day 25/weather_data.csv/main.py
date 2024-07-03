@@ -14,31 +14,31 @@
 #             pass
 #     print(temperatures)
 
-import pandas
+# import pandas
+#
+# main_data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# color_data = main_data["Primary Fur Color"].to_list()
+# gray_num = 0
+# black_num = 0
+# red_num = 0
+# for color in color_data:
+#     if color == 'Gray':
+#         gray_num += 1
+#     elif color == 'Cinnamon':
+#         red_num += 1
+#     elif color == 'Black':
+#         black_num += 1
+#     else:
+#         pass
 
-main_data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-color_data = main_data["Primary Fur Color"].to_list()
-gray_num = 0
-black_num = 0
-red_num = 0
-for color in color_data:
-    if color == 'Gray':
-        gray_num += 1
-    elif color == 'Cinnamon':
-        red_num += 1
-    elif color == 'Black':
-        black_num += 1
-    else:
-        pass
 
-
-data_dict = {
-    "Fur Color": ["gray", "red", "black"],
-    "Count": [gray_num, red_num, black_num]
-}
-# data = pandas.DataFrame(data_dict)
-# data.to_csv("color_amount_data.csv")
-data = pandas.read_csv("weather_data.csv")
+# data_dict = {
+#     "Fur Color": ["gray", "red", "black"],
+#     "Count": [gray_num, red_num, black_num]
+# }
+# # data = pandas.DataFrame(data_dict)
+# # data.to_csv("color_amount_data.csv")
+# data = pandas.read_csv("weather_data.csv")
 #
 # #print the average
 #
@@ -55,8 +55,8 @@ data = pandas.read_csv("weather_data.csv")
 # # also we can just
 # # print(data["temp"].mean())
 # # print(data)
-monday = data[data.day == "Monday"]
-monday_temp = int(monday.temp[0])
-# monday_temp_f = (monday_temp * 1.8) + 32
-# print(monday_temp_f)
-print(monday_temp)
+# monday = data[data.day == "Monday"]
+# monday_temp = int(monday.temp[0])
+# # monday_temp_f = (monday_temp * 1.8) + 32
+# # print(monday_temp_f)
+# print(monday_temp)
